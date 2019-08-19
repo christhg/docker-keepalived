@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+ keepalived:
+      image: osixia/keepalived:latest
+      container_name: keepalived
+      environment:
+          KEEPALIVED_UNICAST_PEERS: "192.168.201.61"
+          KEEPALIVED_VIRTUAL_IPS: "192.168.201.60"
+          #KEEPALIVED_VIRTUAL_MASK: 32
+          KEEPALIVED_PRIORITY: 200
+          #KEEPALIVED_INTERFACE: eth0
+          #KEEPALIVED_ROUTER_ID: 100
+      network_mode: "host"
+      cap_drop:
+        - NET_ADMIN
+      privileged: true
+      #volumes:
+        #- "./keepalived.conf:/etc/keepalived/keepalived.conf"
+      restart: on-failure:3
