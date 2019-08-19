@@ -15,6 +15,7 @@ services:
       cap_drop:
         - NET_ADMIN
       privileged: true
-      #volumes:
+      volumes:
+        - "./run:/run"
         #- "./keepalived.conf:/etc/keepalived/keepalived.conf"
       restart: on-failure:3
