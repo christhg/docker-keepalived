@@ -10,7 +10,7 @@
 
 ## cron to check nginx
 #vi /etc/crontab
-* * * * * root /root/docker-keepalived/check_nginx_service.sh 2>/dev/null 1>&
+#* * * * * root /root/docker-keepalived/check_nginx_service.sh 2>/dev/null 1>&
 
 ## check_nginx_service.sh
 + the shell is to check nginx pid,if not exist then kill docker-keepalived
