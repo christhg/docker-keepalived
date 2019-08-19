@@ -16,7 +16,7 @@ if [ -f "$keepalived_pid" ];then
    for (( i = 0; i < 60; i=(i+step) ));do  
      if [ ! -f "$nginx_pid" ];then
          #echo "killall keepalived..."  #表示nginx服務失敗...stop or kill keepalived容器
-         docker stop keepalived         # docker rm -f keepalived
+         docker stop keepalived         # docker down keepalived
      else
         echo "ngix is running..."
      fi
