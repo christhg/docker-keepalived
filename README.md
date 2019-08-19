@@ -2,15 +2,15 @@
 使用keepalived監測nginx單點故障達到ha高可用
 
 ## clone
-#git clone docker-keepalived to /root
+#git clone docker-keepalived to /root  
 #git clone docker-nginx to /root
 
 ## start nginx
-#cd /root/docker-nginx
+#cd /root/docker-nginx  
 #docker-compose up -d
 
 ## start keepalived
-#cd /root/docker-keepalived  
+#cd /root/docker-keepalived    
 #docker-compose up -d
 
 ## cron to check nginx on real machine
