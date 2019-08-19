@@ -1,0 +1,2 @@
+# docker-keepalived
+使用keepalived監測nginx單點故障達到ha高可用
